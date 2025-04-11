@@ -1,8 +1,8 @@
 package postgres
 
 import (
+	"github.com/ManyakRus/gorm/schema"
 	"testing"
-"gorm.io/gorm/schema"
 )
 
 func Test_DataTypeOf(t *testing.T) {
@@ -13,11 +13,11 @@ func Test_DataTypeOf(t *testing.T) {
 		field *schema.Field
 	}
 	tests := []struct {
-		name string
+		name   string
 		fields fields
-		args args
-		want string
-	} {
+		args   args
+		want   string
+	}{
 		{
 			name: "it should return boolean",
 			args: args{field: &schema.Field{DataType: schema.Bool}},

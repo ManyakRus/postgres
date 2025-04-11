@@ -7,14 +7,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/jackc/pgx/v5"
+	"github.com/ManyakRus/gorm"
+	"github.com/ManyakRus/gorm/callbacks"
+	"github.com/ManyakRus/gorm/clause"
+	"github.com/ManyakRus/gorm/logger"
+	"github.com/ManyakRus/gorm/migrator"
+	"github.com/ManyakRus/gorm/schema"
 	"github.com/jackc/pgx/v5/stdlib"
-	"gorm.io/gorm"
-	"gorm.io/gorm/callbacks"
-	"gorm.io/gorm/clause"
-	"gorm.io/gorm/logger"
-	"gorm.io/gorm/migrator"
-	"gorm.io/gorm/schema"
 )
 
 type Dialector struct {
